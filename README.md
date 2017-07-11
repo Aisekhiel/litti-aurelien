@@ -1,7 +1,7 @@
 <p>
-  <h3>Litti-Aurelien.fr</h3>
+  <h3><a href="https://litti-aurelien.fr">Litti-Aurelien.fr</a></h3>
 
   <p>
-    Here you can find my personal portfolio project's, available <a href="https://litti-aurelien.fr">here</a>
+    Here you can find my personal portfolio project's.
   </p>
 </p>
