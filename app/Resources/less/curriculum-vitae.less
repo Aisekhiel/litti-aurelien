@@ -1,0 +1,69 @@
+// "out": "../../../web/css/curriculum-vitae.css", "sourcemap": "true", "compress": true
+
+@import 'kmns/_mixins.less';
+
+@text-color: #444;
+@bg-light: #F6F6F6;
+
+// Media sizes
+@screen-xs-min: 480px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+@screen-xl-min: 1400px;
+
+@import 'curriculum-vitae/_fonts.less';
+@import 'curriculum-vitae/core.less';
+@import 'curriculum-vitae/texts.less';
+
+// CQV Core -----------------
+@import 'curriculum-vitae/cqv-blocks.less';
+@import 'curriculum-vitae/cqv-frames.less';
+
+// Gears --------------------
+// Gears > Skills scale
+@import 'curriculum-vitae/skills-scale.less';
+// Gears > Rounded Icons List
+@import 'curriculum-vitae/rounded-list.less';
+
+
+// Responsive ---------------
+// Responsive > SMALL (>= 480px)
+@media screen and (min-width: @screen-xs-min) {
+  // CQV Core -----------------
+  @import 'curriculum-vitae/cqv-frames.xs.less';
+}
+
+// Responsive > SMALL (>= 768px)
+@media screen and (min-width: @screen-sm-min) {
+  // CQV Core -----------------
+  @import 'curriculum-vitae/cqv-blocks.sm.less';
+}
+
+// Responsive > SMALL (>= 992px)
+@media screen and (min-width: @screen-md-min) {
+  // CQV Core -----------------
+  @import 'curriculum-vitae/core.md.less';
+  @import 'curriculum-vitae/cqv-blocks.md.less';
+  @import 'curriculum-vitae/cqv-frames.md.less';
+}
+
+// Responsive > SMALL (>= 1200px)
+@media screen and (min-width: @screen-lg-min) {
+  // CQV Core -----------------
+  @import 'curriculum-vitae/core.lg.less';
+  @import 'curriculum-vitae/cqv-blocks.lg.less';
+}
+
+
+// Print --------------------
+@media print {
+  // CQV Core -----------------
+  @import 'curriculum-vitae/core.print.less';
+  @import 'curriculum-vitae/cqv-blocks.print.less';
+  @import 'curriculum-vitae/cqv-frames.print.less';
+
+  // Gears --------------------
+  // Gears > Rounded Icons List
+  @import 'curriculum-vitae/rounded-list.print.less';
+}

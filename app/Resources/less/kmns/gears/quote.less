@@ -1,0 +1,56 @@
+// "main": "../../kaiminus.less"
+
+@quote-bg: rgba(0, 0, 0, .02);
+@quote-icon-color: #000;
+
+.kmns-quote {
+  background-color: @quote-bg;
+  position: relative;
+  z-index: 1;
+  padding: 2.2em 2.6em;
+
+  &:before, &:after {
+    color: @quote-icon-color;
+    font-family: Arial, sans-serif;
+    font-size: 14em;
+    line-height: 1em;
+    position: absolute;
+    z-index: 0;
+    opacity: .07;
+  }
+
+  &:before {
+    content: '“';
+    top: -.08em;
+    left: .07em;
+  }
+
+  &:after {
+    content: '”';
+    bottom: -.6em;
+    right: .07em;
+  }
+
+  > ._title {
+    font-family: @font-family-title;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: .2em;
+    position: relative;
+    z-index: 5;
+  }
+
+  > ._text {
+    line-height: 1.85em;
+    text-indent: 1em;
+    position: relative;
+    z-index: 5;
+
+    p {
+      margin: 0;
+      + p {
+        margin-top: .4em;
+      }
+    }
+  }
+}

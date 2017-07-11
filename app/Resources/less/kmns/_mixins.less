@@ -1,0 +1,35 @@
+// "main": "../kaiminus.less"
+
+.font-face-ttf(@fontname, @fontfile, @fontweight:normal, @fontstyle:normal) {
+  font-family: "@{fontname}";
+  src:         url("@{fontfile}.ttf") format("truetype");
+  font-weight: @fontweight;
+  font-style:  @fontstyle;
+}
+
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
+
+.reset-list() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button-variante(@bg, @color) {
+  background-color: @bg;
+  color: @color;
+
+  &:after {
+    border-color: @bg;
+  }
+
+  &:hover, &:active {
+    background-color: darken(@bg, 4%);
+    color: @color;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Email de {{ name }}</title>
+  </head>
+  <body style="font-family: Arial, Verdana, 'sans-serif'; font-size: 12px; color: #222;">
+    <div style="background-color: whitesmoke; margin: 40px; padding: 30px;">
+      <table style="max-width: 600px;">
+        <tr>
+          <td>
+            <h3 style="font-size: 24px; font-weight: normal; color: #888; margin-top: 0; margin-bottom: .6em;">
+              <span style="color: #222;">{{ name }}</span> vous a envoyé un message
+            </h3>
+            <table>
+              <tr style="padding-bottom: 4px;">
+                <td style="color: #888; vertical-align: top;">Nom</td>
+                <td style="padding-left: 10px; vertical-align: top;">{{ name }}</td>
+              </tr>
+              <tr style="padding-bottom: 4px;">
+                <td style="color: #888; vertical-align: top;">Email</td>
+                <td style="padding-left: 10px; vertical-align: top;">{{ email }}</td>
+              </tr>
+              {% if phone is not empty %}
+                <tr style="padding-bottom: 4px;">
+                  <td style="color: #888; vertical-align: top;">Téléphone</td>
+                  <td style="padding-left: 10px; vertical-align: top;">{{ phone }}</td>
+                </tr>
+              {% endif %}
+              {% if website is not empty %}
+                <tr style="padding-bottom: 4px;">
+                  <td style="color: #888; vertical-align: top;">Site web</td>
+                  <td style="padding-left: 10px; vertical-align: top;">{{ website }}</td>
+                </tr>
+              {% endif %}
+              <tr style="padding-bottom: 4px;">
+                <td style="color: #888; vertical-align: top;">Message</td>
+                <td style="padding-left: 10px; vertical-align: top;">{{ message|nl2br }}</td>
+              </tr>
+            </table>
+            <div style="font-size: 12px; color: #CCC; border-top: 1px solid #DDD; padding-top: 8px; padding-right: 40px; margin-top: 100px; width: 90%; max-width: 420px;">
+              <div>IP : <span style="color: #AAA;">{{ remote_addr }}</span></div>
+              <div>User agent : <span style="color: #AAA;">{{ user_agent }}</span></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

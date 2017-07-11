@@ -1,0 +1,30 @@
+// "main": "../../kaiminus.less"
+
+.magic-placeholder {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+
+  &.magic-1by1 {
+    padding-bottom: 100%;
+  }
+
+  &.magic-4by3 {
+    padding-bottom: 75%;
+  }
+
+  &.magic-16by9 {
+    padding-bottom: 56.25%;
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+  }
+}

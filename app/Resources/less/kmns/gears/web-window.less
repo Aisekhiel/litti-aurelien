@@ -1,0 +1,41 @@
+// "main": "../../kaiminus.less"
+
+@color-wide:   @color-02;
+@color-reduce: @color-04;
+@color-close:  @color-08;
+
+.kmns-web-window {
+  border-radius: .4em;
+  border: .3em solid #FFF;
+  border-top-width: 1.4em;
+  box-shadow: 0 0 0 .2em rgba(0, 0, 0, .04);
+  margin: 0 auto;
+  position: relative;
+
+  > ._controls {
+    position: absolute;
+    top: -1.35em;
+    right: .2em;
+
+    &:before, .control-reduce, &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 50%;
+      overflow: hidden;
+      height: 6px;
+      width: 6px;
+      margin: 0 .2em;
+    }
+
+    &:before        { background-color: @color-wide; }
+    .control-reduce { background-color: @color-reduce; }
+    &:after         { background-color: @color-close; }
+  }
+
+  > ._content {
+    background-color: #f5f5f5;
+    overflow: hidden;
+    border-radius: .3em;
+  }
+}

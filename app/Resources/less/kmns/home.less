@@ -1,0 +1,60 @@
+// "main": "../kaiminus.less"
+
+.kmns-home-block {
+  padding: 1.4em;
+
+  .kmns-title {
+    font-size: 2.4em;
+    margin-top: 0;
+    margin-bottom: .4em;
+    padding-top: 0;
+  }
+
+  > ._mini-desc {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1.6em;
+  }
+}
+
+.home-block--projects {
+  margin-bottom: 2em;
+
+  .kmns-title {
+    color: @color-primary;
+    &:before {
+      background-color: @color-projects;
+      opacity: 1;
+    }
+  }
+}
+
+.home-block--plugins {
+  .kmns-title {
+    color: @color-primary;
+    &:before {
+      background-color: @color-plugins;
+      opacity: 1;
+    }
+  }
+}
+
+.home-block--contact {
+  background-color: @color-contact;
+  color: #FFF;
+  font-weight: 200;
+  text-align: center;
+  padding: 3em;
+  margin-top: 2em;
+
+  > ._content {
+    font-size: 1.3em;
+    line-height: 1.8em;
+    margin: 0 auto;
+    max-width: 40em;
+
+    .content-button {
+      margin-top: 1.2em;
+    }
+  }
+}

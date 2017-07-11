@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- Basic SEO -->
+    <title>{% block meta_title %}{% endblock %}{% block meta_title_base %}Litti Aurélien | Développeur Front-End | Grenoble{% endblock %}</title>
+    <meta name="description" content="{% block meta_desc %}{% endblock %}" />
+    <!-- OGs -->
+    <meta property="og:image" content="{{ asset('images/og-image.png') }}">
+
+    <!-- Stylesheets -->
+    <link href="{{ asset('css/fontello.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/kaiminus.css') }}" rel="stylesheet" />
+    {% block stylesheets %}{% endblock %}
+    <!-- Javascripts -->
+    <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/kaiminus.js') }}"></script><!-- Google Analytics -->
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27728219-2']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+  </head>
+  <body class="kaiminus">
+    <div class="kmns-core">
+      {% block sidebar %}
+        <div class="kmns-sidebar">
+          <div class="kmns-sidebar--main">
+            <div class="_profile">
+              <div class="profile-avatar">
+                <span class="_image">
+                  <span class="magic-placeholder magic-1by1">
+                    <img src="{{ asset('images/photo.png') }}" alt="Photo de Litti Aurélien" />
+                  </span>
+                </span>
+              </div>
+              <h1 class="profile-tag">
+                <div class="_name">Litti Aurélien</div>
+                <small class="_status">Développeur Web / Front-End</small>
+              </h1>
+            </div>
+
+            <div class="_display-about-me">
+              <button class="btn btn-pill button-display-about-me" type="button">
+                <span class="_icon">
+                  <span class="icon-user-circle-o"></span>
+                  <span class="_more-infos">+</span>
+                </span>
+                <span class="_text">À propos</span>
+              </button>
+            </div>
+
+            <div class="_contact-info">
+              <div class="info-item">
+                <span class="item--icon">
+                  <span class="icon-mobile"></span>
+                </span>
+                <span class="item--text"
+                  data-reversed-text="{{ '06 95 06 40 91'|reverse }}">
+                </span>
+              </div>
+
+              <div class="info-item">
+                <span class="item--icon">
+                  <span class="icon-mail"></span>
+                </span>
+                <span class="item--text"
+                  data-reversed-text="{{ 'litti.aurelien@gmail.com'|reverse }}">
+                </span>
+              </div>
+
+              <div class="info-item">
+                <span class="item--icon">
+                  <span class="icon-marker"></span>
+                </span>
+                <span class="item--text">
+                  Grenoble, Auvergne-Rhône-Alpes
+                </span>
+              </div>
+            </div>
+
+            <ul class="_social-networks">
+              <li>
+                <a href="https://www.facebook.com/litti.aurelien" target="_blank"
+                  class="network-link link--facebook">
+                  <span class="icon-facebook"></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/AiseKhiel" target="_blank"
+                  class="network-link link--twitter">
+                  <span class="icon-twitter"></span>
+                </a>
+              </li>
+              <li>
+                <span class="network-link link--message button-display-contact">
+                  <span class="icon-paper-plane"></span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="kmns-sidebar--about-me">
+            <div class="_inner">
+              <div class="about-me--block about-me--controls">
+                <div class="am-controls-label">
+                  <span class="_icon"><span class="icon-user-circle-o"></span></span>
+                  <span class="_text">Un peu plus sur moi</span>
+                </div>
+                <div class="am-controls-close-btn button-display-about-me">
+                  <span class="_button thin-close-icon"></span>
+                </div>
+              </div>
+
+              <div class="about-me--block about-me--intro kmns-quote">
+                <div class="_title">Bienvenue,</div>
+                <div class="_text">
+                  <p>
+                    Si vous ne me connaissez pas encore, je suis donc Aurélien,
+                    un passionné du Web depuis maintenant 6 ans.
+                  </p>
+                  <p>
+                    J’aime me diversifier dans plusieurs domaines, allant de la
+                    réalisation d’une maquette, en passant par son intégration
+                    et développement.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about-me--block about-me--says">
+                <div class="kmns-list-rounded-icon list-rounded-icon-dev">
+                  <div class="_icon"><span class="icon-keyboard"></span></div>
+                  <div class="_text">
+                    <h3 class="text--title">Développement</h3>
+                    <ul class="text--list">
+                      <li><strong>Soucieux</strong> du détail</li>
+                      <li>Code <strong>clair &amp; versionné</strong></li>
+                      <li><strong>Amélioration</strong> future + simple</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="kmns-list-rounded-icon list-rounded-icon-design">
+                  <div class="_icon"><span class="icon-magic"></span></div>
+                  <div class="_text">
+                    <h3 class="text--title">Design</h3>
+                    <ul class="text--list">
+                      <li>Une <strong>attention</strong> particulière</li>
+                      <li>J'aime <strong>explorer</strong> nouveaux horizons</li>
+                      <li>Du <strong>sur-mesure</strong>, au pixel près</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="kmns-list-rounded-icon list-rounded-icon-visibility">
+                  <div class="_icon"><span class="icon-eye"></span></div>
+                  <div class="_text">
+                    <h3 class="text--title">Visibilité</h3>
+                    <ul class="text--list">
+                      <li>Référencement certifié <strong>Bio</strong> (naturel)</li>
+                      <li>Une <strong>accessibilité</strong> à toute épreuve</li>
+                      <li><strong>Optimisation</strong> du référencement</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-me--block about-me--journey">
+                <h2 class="_title kmns-title kmns-title--info">Parcours</h2>
+                <ul class="kmns-timeline">
+                  <li class="timeline-item timeline--live2times">
+                    <div class="_period">Avril 2012 - Juin 2012</div>
+                    <div class="_status">Stage développeur web</div>
+                    <div class="_company">Live<span>2</span>times</div>
+                  </li>
+                  <li class="timeline-item timeline--efrogg">
+                    <div class="_period">Août 2012 - Janvier 2017</div>
+                    <div class="_status">Développeur web front</div>
+                    <div class="_company">e-<span>frogg</span></div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="about-me--block about-me--skills">
+                <h2 class="_title kmns-title kmns-title--info">Compétences</h2>
+                <ul class="kmns-list-skills">
+                  <li class="skill-item skill-item--html-css">
+                    <span class="_label">HTML / CSS</span>
+                    <span class="_level">
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                    </span>
+                  </li>
+
+                  <li class="skill-item skill-item--js">
+                    <span class="_label">Javascript</span>
+                    <span class="_level">
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                    </span>
+                  </li>
+
+                  <li class="skill-item skill-item--php">
+                    <span class="_label">PHP</span>
+                    <span class="_level">
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value"></span>
+                    </span>
+                  </li>
+
+                  <li class="skill-item skill-item--cms">
+                    <span class="_label">Prestashop, Wordpress &amp; CMS</span>
+                    <span class="_level">
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value"></span>
+                    </span>
+                  </li>
+
+                  <li class="skill-item skill-item--git">
+                    <span class="_label">Git / Smartgit, GitKraken &amp; co</span>
+                    <span class="_level">
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value"></span>
+                      <span class="level-value"></span>
+                    </span>
+                  </li>
+
+                  <li class="skill-item skill-item--docker">
+                    <span class="_label">Docker</span>
+                    <span class="_level">
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value is-checked"></span>
+                      <span class="level-value"></span>
+                      <span class="level-value"></span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="about-me--block about-me--more-info">
+                <a href="{{ path('CV') }}" class="btn btn-magic">Voir mon CV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+
+      <div class="kmns-body">
+        {% block body %}{% endblock %}
+
+        <div class="kmns-footer">
+          <div class="_inner">
+            <a href="#about-kaiminus">Kaiminus</a> design by Aisekhiel × 2017
+          </div>
+        </div>
+      </div>
+
+      <div class="kmns-contact-form">
+        <span class="button-close-contact btn btn-default button-display-contact">
+          <span class="thin-close-icon"></span>
+        </span>
+
+        <div class="_inner">
+          <div class="contact-title kmns-title kmns-title--info">
+            Formulaire de contact
+          </div>
+
+          <div class="contact-text">
+            Un projet vous tient à coeur ? Vous avez besoin de conseils web, autour d'un café ?<br>
+            Remplissez ce formulaire et je me ferai une joie de vous répondre !
+          </div>
+
+          <form class="contact-form form-contact-me" method="post">
+            <div class="form-group group--sm-half group--name">
+              <input class="form-control" type="text" required name="contact-name" autocomplete="off" />
+              <label class="form-label" for="contact-name">
+                <span class="_inner">Nom <span class="form-required">*</span></span>
+              </label>
+            </div>
+
+            <div class="form-group group--sm-half group--email">
+              <input class="form-control" type="email" required name="contact-email" autocomplete="off" />
+              <label for="contact-email" class="form-label">
+                <span class="_inner">Email <span class="form-required">*</span></span>
+              </label>
+            </div>
+
+            <div class="form-group group--sm-half group--phone">
+              <input class="form-control" type="text" name="contact-phone" autocomplete="off" />
+              <label class="form-label" for="contact-phone">
+                <span class="_inner">Téléphone</span>
+              </label>
+            </div>
+
+            <div class="form-group group--sm-half group--website">
+              <input class="form-control" type="text" name="contact-website" autocomplete="off" />
+              <label class="form-label" for="contact-website">
+                <span class="_inner">Site web</span>
+              </label>
+            </div>
+
+            <div class="form-group group--message">
+              <textarea class="form-control" required name="contact-message" autocomplete="off"></textarea>
+              <label for="contact-email" class="form-label">
+                <span class="_inner">Message <span class="form-required">*</span></span>
+              </label>
+            </div>
+
+            <div class="form-controls">
+              <button class="btn btn-info btn-send-message" type="submit" name="button">Envoyer</button>
+            </div>
+
+            <div class="form-hint">
+              <span class="form-required">*</span> Champs requis
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="kmns-notice">
+      <div class="_inner">
+        <div class="notice-control">
+          <span class="control-close icon-cancel"></span>
+        </div>
+        <div class="notice-title"></div>
+        <div class="notice-content"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function() {
+        kaiminus.construct('{{ path('contact_me') }}');
+        kmns_notice.construct();
+      });
+    </script>
+    {% block javascripts %}{% endblock %}
+  </body>
+</html>

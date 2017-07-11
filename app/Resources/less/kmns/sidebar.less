@@ -1,0 +1,377 @@
+// "main": "../kaiminus.less"
+
+.kaiminus {
+  &.kmns-status--about-me-visible {
+    .kmns-sidebar--about-me {
+      > ._inner {
+        right: 0;
+      }
+
+      &:before {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Sidebar
+.kmns-sidebar {
+  background-color: @sidebar-bg;
+  color: @sidebar-color;
+}
+
+.kmns-sidebar--main {
+  background: @sidebar--main-bg url('imgs/sidebar-bg-1.png') no-repeat bottom center;
+  text-align: center;
+  padding: 2em 0 1em 0;
+
+  > ._profile {
+    position: relative;
+    padding: 0 1em;
+    margin-bottom: .6em;
+
+    .profile-avatar {
+      display: inline-block;
+      width: 9em;
+      padding: 6px;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        background-color: @sidebar--main-bg;
+        border: .2em solid;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      > ._image {
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+    .profile-tag {
+      line-height: 1.4em;
+      margin: .2em 0 .3em 0;
+
+      > ._name {
+        font-family: @font-family-serif;
+        color: #FFF;
+      }
+
+      > ._status {
+        color: lighten(@color-info, 4%);
+        font-family: @font-family-base;
+        font-size: .45em;
+        line-height: 1em;
+        display: block;
+      }
+    }
+  }
+
+  > ._display-about-me {
+    // font-size: .8em;
+    position: absolute;
+    top: 2em;
+    left: 51%;
+
+    // &:before {
+    //   content: ' ';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   border: .2em solid;
+    //   border-radius: 4em;
+    // }
+  }
+
+  > ._contact-info {
+    background-color: rgba(0, 0, 0, .1);
+    font-size: .85em;
+    text-align: left;
+    margin: 2em auto;
+    padding: .8em 2.4em .6em 2.4em;
+
+    .info-item {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      max-width: 20em;
+      padding: .8em 0;
+      margin: 0 auto;
+      position: relative;
+
+      .item--icon {
+        color: darken(@sidebar-color, 40%);
+        font-size: 1.6em;
+        line-height: 1em;
+        display: table-cell;
+        vertical-align: top;
+        width: 1em;
+
+        > * {
+          &:before {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+
+      .item--text {
+        letter-spacing: .05em;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: .8em;
+      }
+    }
+  }
+
+  .button-display-about-me {
+    background-color: @color-01;
+    color: @sidebar--main-bg;
+    border: .3em solid;
+    padding: .4em .8em .4em .2em;
+    position: relative;
+    z-index: 5;
+
+    > ._icon {
+      font-size: 1.6em;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+
+      > ._more-infos {
+        position: absolute;
+        top: 3px;
+        right: -3px;
+        line-height: 0;
+      }
+    }
+
+
+    > ._text {
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: .3em;
+    }
+  }
+
+  > ._social-networks {
+    letter-spacing: -.3em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      letter-spacing: 0;
+      display: inline-block;
+      position: relative;
+      padding: 0 .6em;
+      margin: 0 .6em;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: currentcolor;
+        width: 1px;
+        height: 1em;
+        left: -.6em;
+        top: 50%;
+        margin-top: -.5em;
+        opacity: .1;
+      }
+
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      .network-link {
+        background-color: transparent;
+        color: @bg-default;
+        line-height: 1em;
+        text-align: center;
+        display: inline-block;
+        padding: 1em .8em;
+        border-radius: 50%;
+        transition: background-color 350ms ease, color 350ms ease;
+        cursor: pointer;
+
+        &:hover {
+          background-color: @bg-default;
+          color: @color-default;
+        }
+
+        &:active {
+          background-color: darken(@bg-default, 6%);
+          color: @color-default;
+        }
+
+        &.link--facebook {
+          &:hover {
+            background-color: @color-facebook;
+            color: #FFF;
+          }
+
+          &:active {
+            background-color: darken(@color-facebook, 6%);
+            color: #FFF;
+          }
+        }
+
+        &.link--twitter {
+          &:hover {
+            background-color: @color-twitter;
+            color: #FFF;
+          }
+
+          &:active {
+            background-color: darken(@color-twitter, 6%);
+            color: #FFF;
+          }
+        }
+      }
+
+      .icon-paper-plane {
+        position: relative;
+        left: -.1em;
+      }
+    }
+  }
+}
+
+.kmns-sidebar--about-me {
+  > ._inner {
+    background-color: @sidebar--about-me-bg;
+    position: fixed;
+    z-index: 10;
+    right: -310px;
+    top: 0;
+    width: 310px;
+    height: 100%;
+    overflow-x: hidden;
+    transition: right 400ms ease;
+  }
+
+  &:before {
+    content: '';
+    background-color: fade(#FFF, 35%);
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 400ms ease;
+  }
+}
+
+.about-me--block {
+  > ._title {
+    font-size: 1.4em;
+  }
+}
+
+.about-me--controls {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-bottom: .2em solid darken(@sidebar--about-me-bg, 4%);
+
+  .am-controls-label, .am-controls-close-btn {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .am-controls-label {
+    padding: .6em .8em;
+    width: 100%;
+
+    > ._icon {
+      font-size: 1.6em;
+    }
+
+    > ._text {
+      font-size: 1.2em;
+    }
+  }
+
+  .am-controls-close-btn {
+    background-color: darken(@sidebar--about-me-bg, 4%);
+    text-align: center;
+    width: 38px;
+    padding: .6em;
+    cursor: pointer;
+    user-select: none;
+    transition: padding 400ms ease, background-color 400ms ease;
+
+    &:hover {
+      background-color: darken(@sidebar--about-me-bg, 6%);
+      padding: .6em .8em;
+
+      > ._button {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      padding: .6em .95em;
+    }
+
+    > ._button {
+      width: 100%;
+      opacity: .6;
+      transition: opacity 400ms ease;
+    }
+  }
+}
+
+.about-me--intro {
+  background-color: lighten(@sidebar--about-me-bg, 2%);
+}
+
+.about-me--says {
+  overflow: hidden;
+}
+
+.about-me--journey, .about-me--skills {
+  padding: 1em 1.4em 2em 1.4em;
+}
+
+.about-me--journey {
+  background-color: darken(@sidebar--about-me-bg, 1%);
+
+  .timeline-item {
+    &:before {
+      background-color: darken(@sidebar--about-me-bg, 1%);
+      box-shadow: 0 0 0 4px darken(@sidebar--about-me-bg, 1%);
+    }
+  }
+}
+
+.about-me--skills {
+  background-color: darken(@sidebar--about-me-bg, 2%);
+}
+
+.about-me--more-info {
+  background-color: darken(@sidebar--about-me-bg, 3%);
+  font-size: 1.1em;
+  text-align: center;
+  padding: 1.4em 0 1em 0;
+}

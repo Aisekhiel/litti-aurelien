@@ -1,0 +1,91 @@
+// "main": "../lists.less"
+
+.kmns-list-plugins {
+  .reset-list;
+}
+
+.plugin-item {
+  background-color: #FFF;
+  padding: 1.2em;
+  border-left: .25em solid lighten(@color-06, 20%);
+  border-radius: .2em;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: border 400ms ease;
+
+  &:before {
+    font-family: fontello;
+    content: '\f32c';
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+    font-size: 10em;
+    position: absolute;
+    z-index: 0;
+    bottom: -.2em;
+    right: -.4em;
+    color: @bg-default;
+  }
+
+  &:hover {
+    // box-shadow: inset 1.2em 0 1.4em -1.2em fade(@color-plugins, 50%);
+    border-color: @color-plugins;
+
+    &:before {
+      color: @color-plugins;
+      opacity: .1;
+    }
+
+    > ._name {
+      color: @color-plugins;
+    }
+  }
+
+  + .plugin-item {
+    margin-top: 1.6em;
+  }
+
+  > ._name {
+    color: @color-06;
+    font-weight: bold;
+    margin: 0 auto .4em auto;
+    transition: color 400ms ease;
+  }
+
+  > ._desc {
+    line-height: 1.6em;
+    position: relative;
+    z-index: 5;
+  }
+}

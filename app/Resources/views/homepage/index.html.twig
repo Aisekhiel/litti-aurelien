@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block meta_desc %}Développeur web freelance à Grenoble, je maîtrise plusieurs langages web, CMS (Prestashop, Wordpress) et framework me permettant de gérer tout type de projet.{% endblock %}
+
+{% block body %}
+<div class="kmns-home-block home-block--projects">
+  <h2 class="kmns-title">
+    Quelques projets
+  </h2>
+  <div class="_mini-desc">
+    N'hésitez pas à <span class="link button-display-contact">me contacter</span> pour découvrir plus d'exemples.
+  </div>
+  <div class="_content">
+    <ul class="kmns-list-projects">
+      {% for project in projects %}
+      <li class="project-item">
+        <div class="item-image">
+          <div class="kmns-web-window">
+            <span class="_controls"><span class="control-reduce"></span></span>
+            <div class="_content">
+              <div class="magic-placeholder" style="padding-bottom: 64%">
+                <img src="{{ asset(project.thumb_url) }}" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-text">
+          <h3 class="_title">
+            {{ project.title }}
+            <div class="_subtitle">
+              <span class="item-date">{{ project.date }}</span> - {{ project.category_name }}
+            </div>
+          </h3>
+
+          <div class="_desc">{{ project.desc|raw }}</div>
+
+          {% if project.tags is defined and project.tags is not empty %}
+          <div class="_tags">
+            <span class="tags-icon icon-tags"></span>
+            <span class="tags-list">{{ project.tags|join(' × ') }}</span>
+          </div>
+          {% endif %}
+
+          {% if project.link is defined and project.link is not empty %}
+          <div class="_link">
+            <a class="btn btn-info btn-pill" href="{{ project.link }}" target="_blank">
+              voir le site
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="kmns-home-block home-block--plugins">
+  <h2 class="kmns-title">Outils &amp; expériences</h2>
+  <!-- <div class="_mini-desc"></div> -->
+  <div class="_content">
+    <ul class="kmns-list-plugins">
+      {% for plugin in plugins %}
+      <li class="plugin-item">
+        <h3 class="_name">{{ plugin.name }}</h3>
+        <div class="_desc">
+          {{ plugin.desc|raw }}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="kmns-home-block home-block--contact">
+  <h2 class="kmns-title">Une question, un projet ?</h2>
+  <div class="_content">
+    Je travaille actuellement en <span class="text-important">freelance</span>,
+    si vous cherchez un conseil sur un projet ou si vous avez simplement
+    besoin d'un développeur <span class="text-important">motivé et pro</span>,
+    n'hésitez pas ...
+
+    <div class="content-button">
+      <button class="button-display-contact btn btn-primary btn-pill" type="button">Contactez-moi !</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

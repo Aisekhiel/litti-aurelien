@@ -1,0 +1,36 @@
+// "main": "../kaiminus.less"
+
+.kaiminus {
+  &.kmns-status--about-me-visible {
+    .kmns-sidebar {
+      width: @sidebar-width-lg + @sidebar--about-me-width-lg;
+    }
+
+    .kmns-sidebar--about-me {
+      &:before {
+        left: auto;
+      }
+    }
+  }
+}
+
+.kmns-sidebar {
+  height: 100vh - (@core-margin-top-lg + @core-margin-bottom-lg);
+}
+
+.kmns-sidebar--main {
+  height: 100vh - (@core-margin-top-lg + @core-margin-bottom-lg);
+}
+
+.kmns-sidebar--about-me {
+  > ._inner {
+    left: @sidebar-width-lg;
+  }
+  
+  &:before {
+    top: 4vh;
+    bottom: 4vh;
+    right: auto;
+    width: @core-max-width-lg;
+  }
+}

@@ -1,0 +1,149 @@
+// "main" : "../../kaiminus.less"
+
+// Colors > default
+@btn-default-bg: lighten(@color-09, 12%);
+@btn-default-color: @color-default;
+@btn-default-border: @color-09;
+
+@btn-default-hover-bg: @btn-default-border;
+@btn-default-hover-color: @btn-default-color;
+@btn-default-hover-border: @btn-default-hover-bg;
+
+// Colors > primary
+@btn-primary-bg: @color-primary;
+@btn-primary-color: #FFF;
+@btn-primary-border: darken(@color-primary, 3%);
+
+@btn-primary-hover-bg: @btn-primary-border;
+@btn-primary-hover-color: #FFF;
+@btn-primary-hover-border: @btn-primary-hover-bg;
+
+// Colors > infos
+@btn-info-bg: @color-info;
+@btn-info-color: #FFF;
+@btn-info-border: darken(@color-info, 6%);
+
+@btn-info-hover-bg: @btn-info-border;
+@btn-info-hover-color: #FFF;
+@btn-info-hover-border: @btn-info-hover-bg;
+
+// Colors > success
+@btn-success-bg: @color-success;
+@btn-success-color: #FFF;
+@btn-success-border: darken(@color-success, 6%);
+
+@btn-success-hover-bg: @btn-success-border;
+@btn-success-hover-color: #FFF;
+@btn-success-hover-border: @btn-success-hover-bg;
+
+// Colors > warning
+@btn-warning-bg: @color-warning;
+@btn-warning-color: #FFF;
+@btn-warning-border: darken(@color-warning, 6%);
+
+@btn-warning-hover-bg: @btn-warning-border;
+@btn-warning-hover-color: #FFF;
+@btn-warning-hover-border: @btn-warning-hover-bg;
+
+// Colors > danger
+@btn-danger-bg: @color-danger;
+@btn-danger-color: #FFF;
+@btn-danger-border: desaturate(darken(@color-danger, 4%), 6%);
+
+@btn-danger-hover-bg: @btn-danger-border;
+@btn-danger-hover-color: #FFF;
+@btn-danger-hover-border: @btn-danger-hover-bg;
+
+// Colors > magic
+@btn-magic-bg: @color-magic;
+@btn-magic-color: #FFF;
+@btn-magic-border: darken(@color-magic, 6%);
+
+@btn-magic-hover-bg: @btn-magic-border;
+@btn-magic-hover-color: #FFF;
+@btn-magic-hover-border: @btn-magic-hover-bg;
+
+
+
+// Button + buttons alternative
+.btn {
+  font-family: Raleway;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: .04em;
+  line-height: 1em;
+  text-align: center;
+  border: 0;
+  border-radius: 2em;
+  box-shadow: inset -.1em -.3em 0 rgba(0, 0, 0, .1);
+  display: inline-block;
+  padding: .6em 2em .8em 2em;
+  margin: .2em;
+  position: relative;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    border: 2px solid;
+    border-radius: 2em;
+    top: -4px;     right: -4px;
+    bottom: -4px;  left: -4px;
+    opacity: 0;
+    transform: scale(1.1);
+    transition:
+      transform 400ms ease,
+      opacity 400ms ease;
+  }
+
+  &:hover, &:focus {
+    &:after {
+      transform: scale(1);
+      opacity: .5;
+    }
+  }
+
+  &:active {
+    box-shadow: inset -.1em -.25em 0 rgba(0, 0, 0, .1);
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  // Alternatives
+  &-default {
+    .button-variante(@btn-default-bg, @btn-default-color);
+  }
+
+  // Alt > primary
+  &-primary {
+    .button-variante(@btn-primary-bg, @btn-primary-color);
+  }
+
+  // Alt > info
+  &-info {
+    .button-variante(@btn-info-bg, @btn-info-color);
+  }
+
+  // Alt > success
+  &-success {
+    .button-variante(@btn-success-bg, @btn-success-color);
+  }
+
+  // Alt > warning
+  &-warning {
+    .button-variante(@btn-warning-bg, @btn-warning-color);
+  }
+
+  // Alt > danger
+  &-danger {
+    .button-variante(@btn-danger-bg, @btn-danger-color);
+  }
+
+  // Alt > magic
+  &-magic {
+    .button-variante(@btn-magic-bg, @btn-magic-color);
+  }
+}

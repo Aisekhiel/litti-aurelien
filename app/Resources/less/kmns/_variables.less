@@ -1,0 +1,78 @@
+// "main": "../kaiminus.less"
+
+// Media sizes
+@screen-xs-min: 480px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+@screen-xl-min: 1400px;
+
+
+// Fonts
+@font-family-serif:      "Roboto Slab", "Times New Roman", serif;
+@font-family-sans-serif: "Raleway", Arial, sans-serif;
+@font-family-base:       @font-family-sans-serif;
+@font-family-title:      @font-family-sans-serif;
+
+
+// Colors
+// Colors > pallet
+@color-01: #48b2f9;
+@color-02: #2ecc71;
+@color-03: #1abc9c;
+@color-04: #f1c40f;
+@color-05: #9b59b6;
+@color-06: #bdc3c7;
+@color-06: #95a5a6;
+@color-07: #f39c12;
+@color-08: #e74c3c;
+@color-09: #ecf0f1;
+// Colors > default
+@brand-primary:   #2c3e50;
+@bg-default:      #f4fafb;
+@color-default:   darken(@color-06, 26%);
+@color-primary:   @brand-primary;
+@color-info:      @color-01;
+@color-success:   @color-02;
+@color-warning:   @color-07;
+@color-danger:    @color-08;
+@color-magic:     @color-05;
+// Colors > Social Network
+@color-facebook:  #3b5998;
+@color-twitter:   #1da1f2;
+// Colors > Link
+@link-color: @color-01;
+@link-color-hover: lighten(@link-color, 6%);
+// Colors > Sidebar
+@sidebar-bg:     darken(@brand-primary, 4%);
+@sidebar-color:  #ecf0f1;
+// Colors > Sidebar > About Me
+@sidebar--about-me-bg: darken(@brand-primary, 4%);
+@sidebar--main-bg:     @brand-primary;
+
+@color-code:      @color-magic;
+
+@color-projects:  @color-01;
+@color-plugins:   @color-03;
+@color-contact:   @color-01;
+
+
+
+// Do the Math
+@frame-border-radius-size: 6px;
+// Math > Core & co
+@core-max-width-lg: 1150px;
+@core-max-width-xl: 1270px;
+@core-margin-top: 2vh;
+@core-margin-bottom: 2vh;
+@core-margin-top-lg: 4vh;
+@core-margin-bottom-lg: 4vh;
+@core-margin-top-xl: 5vh;
+@core-margin-bottom-xl: 5vh;
+// Math > Sidebar
+@sidebar-width: 260px;
+@sidebar-width-lg: @sidebar-width;
+@sidebar-width-xl: 280px;
+@sidebar--about-me-width: 320px;
+@sidebar--about-me-width-lg: @sidebar--about-me-width;
+@sidebar--about-me-width-xl: 340px;

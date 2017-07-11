@@ -1,0 +1,99 @@
+// "main": "../lists.less"
+
+@list-thumb-title-color: @color-09;
+@list-thumb-category-color: @color-06;
+
+@list-thumb-hover-title-color: #FFF;
+@list-thumb-hover-category-color: @color-01;
+
+.kmns-list-thumbs {
+  .reset-list;
+
+  .thumb-item {
+    display: inline-block;
+    width: 100%;
+    border-radius: .3em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+
+      .item-text {
+        > ._title {
+          color: @list-thumb-hover-title-color;
+        }
+
+        > ._category {
+          color: @list-thumb-hover-category-color;
+        }
+      }
+
+      &:before {
+        top: -1em;
+        opacity: .8;
+      }
+    }
+
+    + .thumb-item {
+      margin-top: .8em;
+    }
+
+    &:before {
+      content: '';
+      background-color: #222;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+      /* FF3.6-15 */
+      background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: .7;
+      transition:
+        top 350ms ease,
+        opacity 350ms ease;
+    }
+
+    .item-text {
+      padding: 1.2em 1.4em;
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      > ._title, > ._category {
+        transition: color 350ms ease;
+      }
+
+      > ._title {
+        color: @list-thumb-title-color;
+        font-family: @font-family-base;
+        font-size: 1.2em;
+        margin: 0;
+      }
+
+      > ._category {
+        color: @list-thumb-category-color;
+        font-size: 1em;
+        font-style: italic;
+        display: block;
+        margin-top: .2em;
+      }
+    }
+
+    .item-image {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

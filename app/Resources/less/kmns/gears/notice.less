@@ -1,0 +1,71 @@
+// "main": "../../kaiminus.less"
+
+.kmns-notice {
+  background-color: @bg-default;
+  color: @color-default;
+  border-radius: .2em;
+  // border-bottom: .25em solid rgba(0, 0, 0, .25);
+  padding: .8em 2.4em .8em 1.2em;
+  max-width: 28em;
+  position: fixed;
+  z-index: 666;
+  bottom: 1.6em;
+  box-shadow: inset 0 -.2em 0 rgba(0, 0, 0, .25);
+  transform: scale(.9);
+  right: -10em;
+  opacity: 0;
+  pointer-events: none;
+  transition: 400ms ease;
+  transition-property: transform, right, opacity;
+
+  .notice-control {
+    font-size: 1.6em;
+    position: absolute;
+    top: .2em;
+    right: .1em;
+
+    .control-close {
+      cursor: pointer;
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .notice-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: .4em;
+  }
+
+  .notice-content {
+    font-size: 1em;
+    line-height: 1.6em;
+  }
+
+
+
+  &.notice--visible {
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1);
+    right: 1.6em;
+  }
+
+  &.notice--warning {
+    background-color: lighten(@color-warning, 4%);
+    color: darken(@color-warning, 30%);
+  }
+
+  &.notice--danger {
+    background-color: lighten(@color-danger, 4%);
+    color: darken(@color-danger, 30%);
+  }
+
+  &.notice--success {
+    background-color: @color-success;
+    color: darken(@color-success, 30%);
+  }
+}

@@ -1,0 +1,113 @@
+// "main": "../../kaiminus.less"
+
+// Form > Containers / Groups
+.form-group {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: 1em;
+  margin-bottom: 2.4em;
+}
+
+
+// Forms > Texts
+.form-label {
+  > ._inner {
+    line-height: 1em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -.5em;
+    padding: 0 .2em;
+    opacity: .75;
+    pointer-events: none;
+  }
+
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &:before {
+    background-color: currentcolor;
+    height: 1px;
+  }
+
+  &:after {
+    background-color: @color-info;
+    width: 0;
+    height: 2px;
+    margin-bottom: -1px;
+    transition: width 400ms ease;
+  }
+}
+
+// Forms > Inputs
+.form-control {
+  font-family: inherit;
+  font-size: 1.2em;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: .4em .1em;
+  display: block;
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+
+    ~ .form-label {
+      > ._inner {
+        opacity: 1;
+      }
+
+      &:after {
+        width: 100%
+      }
+    }
+  }
+
+  &:focus, &.control--filled {
+    ~ .form-label {
+      > ._inner {
+        top: 0;
+        margin-top: -1em;
+      }
+    }
+  }
+}
+
+textarea {
+  &.form-control {
+    line-height: 1.6em;
+    height: 2em !important;
+    max-width: 100%;
+    overflow: hidden;
+
+    &:focus, &.control--filled {
+      height: 8em !important;
+      overflow: auto;
+    }
+  }
+}
+
+.form-controls {
+  text-align: center;
+  margin: 0 auto 1.6em auto;
+}
+
+.form-hint {
+  text-align: right;
+  color: @color-06;
+}
+
+.form-required {
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 0;
+  color: @color-danger;
+}

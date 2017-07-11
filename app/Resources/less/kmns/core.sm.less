@@ -1,0 +1,60 @@
+// "main": "../kaiminus.less"
+
+.kaiminus {
+  overflow: hidden;
+
+  &.kmns-status--about-me-visible {
+    .kmns-body {
+      left: @sidebar--about-me-width;
+      opacity: .5;
+    }
+  }
+}
+
+// Core / Body
+.kmns-core {
+  width: 96%;
+  height: 100vh - (@core-margin-top + @core-margin-bottom);
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: @core-margin-top auto;
+  border-radius:
+    @frame-border-radius-size+2px 0
+    0 @frame-border-radius-size+2px; // +2px to hide white background
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.kmns-body {
+  position: relative;
+  z-index: 15;
+  left: 0;
+  margin-left: 260px;
+  opacity: 1;
+  transition:
+    opacity 400ms ease,
+    left 400ms ease;
+}
+
+.kmns-contact-form {
+  .button-close-contact {
+    font-size: 2em;
+  }
+
+  > ._inner {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .contact-form {
+    .form-group {
+      display: inline-block;
+      width: 95%;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+
+    .group--sm-half {
+      width: 45%;
+    }
+  }
+}

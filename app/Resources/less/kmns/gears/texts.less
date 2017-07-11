@@ -1,0 +1,155 @@
+// "main": "../../kaiminus.less"
+
+// Titles
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @font-family-title;
+  font-weight: normal;
+  line-height: 1em;
+  margin: .4em 0 .2em 0;
+}
+
+h1, .h1 {
+  font-size: 2.6em;
+}
+
+h2, .h2 {
+  font-size: 2.2em;
+}
+
+h3, .h3 {
+  font-size: 2em;
+}
+
+h4, .h4 {
+  font-size: 1.8em;
+}
+
+h5, .h5 {
+  font-size: 1.6em;
+}
+
+h6, .h6 {
+  font-size: 1.4em;
+}
+
+
+// Code
+code {
+  background-color: fade(@color-code, 10%);
+  color: @color-code;
+  border-radius: .2em;
+  padding: .1em .4em;
+}
+
+
+// Custom titles
+.kmns-title {
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin: .2em 0 .8em 0;
+  padding: .2em 0 .6em 0;
+
+  &:before {
+    content: '';
+    background-color: currentcolor;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.1em;
+    width: 2.2em;
+    height: .15em;
+    border-radius: .15em;
+    opacity: .3;
+  }
+
+  &--primary {
+    &:before {
+      background-color: @color-primary;
+      opacity: 1;
+    }
+  }
+
+  &--info {
+    &:before {
+      background-color: @color-info;
+      opacity: 1;
+    }
+  }
+
+  &--success {
+    &:before {
+      background-color: @color-success;
+      opacity: 1;
+    }
+  }
+
+  &--warning {
+    &:before {
+      background-color: @color-warning;
+      opacity: 1;
+    }
+  }
+
+  &--danger {
+    &:before {
+      background-color: @color-danger;
+      opacity: 1;
+    }
+  }
+}
+
+
+// Alignments
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+
+// Paragraph
+p {
+  margin: 0;
+  + p {
+    margin-top: .6em;
+  }
+}
+
+
+// Miscellaneous
+.text-important {
+  display: inline-block;
+  line-height: 1.2em;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -.2em;
+    left: -.2em;
+    right: -.2em;
+    border-top: .1em solid;
+    opacity: .3;
+  }
+}
+
+
+[data-reversed-text] {
+  &:before {
+    content: attr(data-reversed-text);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+}

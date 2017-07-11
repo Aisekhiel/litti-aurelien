@@ -1,0 +1,98 @@
+// "main": "../lists.less"
+
+@list-rounded-icon-dev-color:        @color-02;
+@list-rounded-icon-design-color:     @color-01;
+@list-rounded-icon-visibility-color: @color-05;
+.kmns-list-rounded-icon {
+  position: relative;
+  z-index: 1;
+  padding: 1.8em 0;
+  margin-bottom: .6em;
+
+  > ._icon {
+    background-color: rgba(255, 255, 255, .06);
+    font-size: 3em;
+    text-shadow: .1em .1em 0 rgba(0, 0, 0, .1);
+    display: inline-block;
+    border-radius: 50%;
+    padding: .8em .7em;
+    position: absolute;
+    z-index: 0;
+    top: -.2em;
+    left: -.4em;
+  }
+
+  > ._text {
+    margin-left: 6.4em;
+    position: relative;
+    z-index: 5;
+  }
+
+
+  .text--title {
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: .6em;
+  }
+
+  .text--list {
+    line-height: 1.4em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      + li {
+        margin-top: .4em;
+      }
+
+      &:before {
+        content: '+ ';
+      }
+    }
+
+    b {
+      color: #FFF;
+    }
+  }
+
+  // Variantes
+  &.list-rounded-icon-dev {
+    > ._icon {
+      background-color: fade(@list-rounded-icon-dev-color, 6%);
+      color: @list-rounded-icon-dev-color;
+    }
+
+    > ._text {
+      strong {
+        color: @list-rounded-icon-dev-color;
+      }
+    }
+  }
+
+  &.list-rounded-icon-design {
+    > ._icon {
+      background-color: fade(@list-rounded-icon-design-color, 6%);
+      color: @list-rounded-icon-design-color;
+    }
+
+    > ._text {
+      strong {
+        color: @list-rounded-icon-design-color;
+      }
+    }
+  }
+
+  &.list-rounded-icon-visibility {
+    > ._icon {
+      background-color: fade(@list-rounded-icon-visibility-color, 6%);
+      color: @list-rounded-icon-visibility-color;
+    }
+
+    > ._text {
+      strong {
+        color: @list-rounded-icon-visibility-color;
+      }
+    }
+  }
+}

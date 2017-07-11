@@ -1,0 +1,57 @@
+// "main": "../lists.sm.less"
+
+.kmns-list-projects {
+  text-align: left;
+
+  .project-item {
+    margin-bottom: 2.6em;
+    padding-bottom: 2.6em;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+.project-item {
+  &:nth-child(2n) {
+    .item-image {
+      float: right;
+    }
+
+    .item-text {
+      margin-left: 0;
+      margin-right: 50%;
+    }
+  }
+
+  .item-image {
+    width: 40%;
+    float: left;
+    margin-bottom: 0;
+
+    .kmns-web-window {
+      max-width: 300px;
+    }
+  }
+
+  .item-text {
+    padding: .6em 1.4em 0 1.4em;
+    width: 60%;
+    margin-left: 40%;
+
+    > ._tags {
+      &:before {
+        left: 0;
+        margin-left: 0;
+      }
+    }
+
+    > ._desc {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+}

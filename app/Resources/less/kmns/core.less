@@ -1,0 +1,165 @@
+// "main": "../kaiminus.less"
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.kaiminus {
+  background-color: #222;
+  font-family: @font-family-base;
+  font-size: 12px;
+  margin: 0;
+
+  &.kmns-status--about-me-visible {
+    overflow: hidden;
+  }
+
+  &.kmns-status--contact-visible {
+    overflow: hidden;
+    
+    .kmns-contact-form {
+      opacity: 1;
+      pointer-events: auto;
+
+      > ._inner {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+// Links
+a, .link {
+  color: @link-color;
+
+  &:hover, &:active {
+    color: @link-color-hover;
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.thin-close-icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  width: 1em;
+
+  &:before, &:after {
+    content: '';
+    background-color: currentcolor;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+
+  &:before {
+    transform: rotateZ(45deg);
+  }
+
+  &:after {
+    transform: rotateZ(-45deg);
+  }
+}
+
+
+
+// Core / Body
+.kmns-core {
+  background-color: @bg-default;
+  color: @color-default;
+}
+
+.kmns-body {
+  padding-top: 1em;
+}
+
+.kmns-contact-form {
+  background-color: @brand-primary;
+  background-color: fade(@brand-primary, 98%);
+  color: #FFF;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease;
+
+  .button-close-contact {
+    background-color: rgba(0, 0, 0, .15);
+    color: #FFF;
+    font-size: 1.6em;
+    line-height: 1;
+    padding: .12em 0 0 0;
+    height: 1.4em;
+    width: 1.4em;
+    box-shadow: none;
+    position: fixed;
+    z-index: 5;
+    top: .8em;
+    right: .8em;
+
+    &:hover {
+      background-color: #FFF;
+      color: @color-default;
+    }
+  }
+
+  > ._inner {
+    margin: 2em auto;
+    padding: 1em;
+    width: 96%;
+    max-width: 800px;
+    transform: scale(1.1);
+    opacity: 0;
+    transition: opacity 666ms ease 400ms, transform 666ms ease 400ms;
+  }
+
+  .contact-title {
+    font-size: 2.4em;
+    margin-bottom: .6em;
+  }
+
+  .contact-text {
+    color: @color-09;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    text-align: center;
+  }
+
+  .contact-form {
+    margin: 2em auto;
+    max-width: 540px;
+  }
+
+  .btn-send-message {
+    font-size: 1.2em;
+  }
+}
+
+.kmns-footer {
+  background-color: darken(@bg-default, 2%);
+  color: lighten(@color-default, 30%);
+  font-size: .8em;
+  text-align: center;
+  padding: 1.2em;
+
+  a {
+    text-decoration: none;
+  }
+}

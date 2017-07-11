@@ -1,0 +1,76 @@
+// "main": "../lists.less"
+
+.kmns-list-projects {
+  text-align: center;
+  .reset-list;
+
+  .project-item {
+    margin-bottom: 2.4em;
+    padding-bottom: 1.8em;
+    border-bottom: .1em solid lighten(@color-06, 30%);
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+.project-item {
+  .item-image {
+    width: 220px;
+    margin: 0 auto 1em auto;
+  }
+
+  .item-date {
+    color: @color-projects;
+  }
+
+  .item-text {
+    > ._title {
+      color: @color-primary;
+      font-size: 1.6em;
+      margin: 0 0 .4em 0;
+
+      > ._subtitle {
+        color: @color-06;
+        font-size: .6em;
+        line-height: 1em;
+        margin-top: .3em;
+      }
+    }
+
+    > ._desc {
+      line-height: 1.8em;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    > ._tags {
+      font-size: .8em;
+      margin-top: .6em;
+      padding-top: .5em;
+      position: relative;
+
+      &:before {
+        content: '';
+        border-top: .1em solid;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -2em;
+        width: 4em;
+        opacity: .25;
+      }
+
+      .tags-icon {
+        color: @color-projects;
+      }
+    }
+
+    > ._link {
+      margin-top: .8em;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// "main": "../lists.less"
+
+.kmns-timeline {
+  list-style: none;
+  padding: 1em 0 1em 1.4em;
+  margin: 0 0 0 .4em;
+  border-left: .2em solid;
+}
+
+.timeline-item {
+  position: relative;
+
+  + .timeline-item {
+    margin-top: 2.2em;
+  }
+
+  &:before {
+    content: '';
+    background-color: @bg-default;
+    position: absolute;
+    left: -23px;
+    top: 50%;
+    margin-top: -3px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    border: 2px solid @color-info;
+    box-shadow: 0 0 0 4px @bg-default;
+  }
+
+  &.timeline--live2times {
+    > ._company {
+      span {
+        color: @color-danger;
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  &.timeline--efrogg {
+    > ._company {
+      span {
+        color: @color-success;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  > ._period {
+    font-size: .95em;
+    opacity: .3;
+  }
+
+  > ._status {
+    font-size: 1.2em;
+  }
+}

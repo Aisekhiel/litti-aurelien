@@ -1,0 +1,21 @@
+// "main": "../kaiminus.less"
+
+.kaiminus {
+  &.kmns-status--about-me-visible {
+    .kmns-body {
+      left: @sidebar--about-me-width-xl;
+    }
+  }
+}
+
+// Core / Body
+.kmns-core {
+  height: 100vh - (@core-margin-top-xl + @core-margin-bottom-xl);
+  margin-top: @core-margin-top-xl;
+  margin-bottom: @core-margin-bottom-xl;
+  max-width: @core-max-width-xl;
+}
+
+.kmns-body {
+  margin-left: @sidebar-width-xl;
+}

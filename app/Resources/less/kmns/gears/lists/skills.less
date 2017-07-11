@@ -1,0 +1,97 @@
+// "main": "../lists.less"
+
+@list-skills-checked-color: @bg-default;
+
+.kmns-list-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+
+  .skill-item {
+    background-color: rgba(0, 0, 0, .1);
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: .4em .8em;
+    margin-bottom: .4em;
+    border-radius: .2em;
+
+    > ._label, ._level {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    > ._label {
+      font-size: .85em;
+    }
+
+    > ._level {
+      text-align: right;
+      width: 5.6em;
+
+      .level-value {
+        background-color: rgba(0, 0, 0, .08);
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        position: relative;
+        height: 4px;
+        width: 4px;
+        margin: 0 3px;
+
+        &.is-checked {
+          background-color: currentcolor;
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            bottom: -3px;
+            left: -3px;
+            border: 1px solid;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    &--html-css {
+      > ._level {
+        color: @color-04;
+      }
+    }
+
+    &--js {
+      > ._level {
+        color: @color-02;
+      }
+    }
+
+    &--php {
+      > ._level {
+        color: @color-03;
+      }
+    }
+
+    &--cms {
+        > ._level {
+          color: lighten(@color-01, 6%);
+        }
+    }
+
+    &--git {
+        > ._level {
+          color: @color-01;
+        }
+    }
+
+    &--docker {
+        > ._level {
+          color: @color-05;
+        }
+    }
+  }
+}
