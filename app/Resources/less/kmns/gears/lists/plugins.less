@@ -69,6 +69,14 @@
 
     > ._name {
       color: @color-plugins;
+
+      .name--icon {
+        opacity: .4;
+      }
+    }
+
+    a {
+      color: @color-plugins;
     }
   }
 
@@ -81,6 +89,27 @@
     font-weight: bold;
     margin: 0 auto .4em auto;
     transition: color 400ms ease;
+
+    &:hover {
+      .name--icon {
+        opacity: .75;
+      }
+    }
+
+    .name--text, .name--icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .name--icon {
+      font-size: .75em;
+      opacity: 0;
+      transition: opacity 400ms ease;
+    }
+  }
+
+  a {
+    color: @color-06;
   }
 
   > ._desc {

@@ -27,7 +27,7 @@
 
         <div class="item-text">
           <h3 class="_title">
-            {{ project.title }}
+            {{ project.title|raw }}
             <div class="_subtitle">
               <span class="item-date">{{ project.date }}</span> - {{ project.category_name }}
             </div>
@@ -63,7 +63,12 @@
     <ul class="kmns-list-plugins">
       {% for plugin in plugins %}
       <li class="plugin-item">
-        <h3 class="_name">{{ plugin.name }}</h3>
+        <h3 class="_name">
+          <a href="{{ plugin.link }}" target="_blank">
+            <span class="name--text">{{ plugin.name }}</span>
+            <span class="name--icon icon-link-ext"></span>
+          </a>
+        </h3>
         <div class="_desc">
           {{ plugin.desc|raw }}
         </div>
