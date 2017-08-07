@@ -18,8 +18,14 @@
           <div class="kmns-web-window">
             <span class="_controls"><span class="control-reduce"></span></span>
             <div class="_content">
-              <div class="magic-placeholder" style="padding-bottom: 64%">
-                <img src="{{ asset(project.thumb_url) }}" />
+              <div class="magic-placeholder{% if project.thumb_url is iterable %} magic-placeholder--carousel{% endif %}" style="padding-bottom: 64%" data-iterable="{{ project.thumb_url is iterable }}">
+                {% if project.thumb_url is iterable %}
+                  {% for thumb in project.thumb_url %}
+                  <img src="{{ asset(thumb) }}" class="placeholder-image{% if loop.first%} placeholder-image--current{% endif %}" />
+                  {% endfor %}
+                {% else %}
+                  <img src="{{ asset(project.thumb_url) }}" class="placeholder-image" />
+                {% endif %}
               </div>
             </div>
           </div>

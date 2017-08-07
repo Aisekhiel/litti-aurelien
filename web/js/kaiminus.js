@@ -91,6 +91,21 @@ var kaiminus = {
     if(typeof(contact_url) != 'undefined' && contact_url != '')
       self.contact_url = contact_url;
 
+    self.$magic_placeholder = self.$body.find('.magic-placeholder');
+    setInterval(function() {
+      self.$magic_placeholder.each(function() {
+        var $placeholder_imgs = $(this).find('.placeholder-image');
+        if($placeholder_imgs.length > 1) {
+          var index_current = $placeholder_imgs.filter('.placeholder-image--current').index();
+          var index_next_img = ((index_current+1) > ($placeholder_imgs.length-1))?0:index_current+1;
+          $placeholder_imgs
+            .removeClass('placeholder-image--current')
+            .eq(index_next_img).addClass('placeholder-image--current');
+        }
+      });
+    }, 4000);
+
+
     // Events
     // Event > Sidebar
     self.$sidebar = self.$body.find('.kmns-sidebar');
@@ -159,7 +174,7 @@ var kaiminus = {
 
   contact_is_visible: false,
   toggle_contact : function() {
-    this.$body.toggleClass('kmns-status--contact-visible')
+    this.$body.toggleClass('kmns-status--contact-visible');
   },
 
   contact_me_data : {},

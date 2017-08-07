@@ -27,4 +27,15 @@
     width: 100%;
     border: 0;
   }
+
+  &--carousel {
+    .placeholder-image {
+      opacity: 0;
+      transition: opacity 1s ease;
+
+      &--current {
+        opacity: 1;
+      }
+    }
+  }
 }
