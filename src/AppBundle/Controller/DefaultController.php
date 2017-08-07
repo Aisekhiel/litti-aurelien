@@ -24,7 +24,33 @@ class DefaultController extends Controller
         'desc'          => "Ce site a été réalisé avec un modèle MVC maison,
           il permet de mieux visualiser et gérer ses dépenses.<br>
           C'est une sorte de livret de compte en ligne, avec génération de graphiques
-          trié par catégorie."
+          trié par catégorie pour un meilleur suivi des comptes en banque."
+      ],
+      [
+        'title'         => "Prestashop: Refonte &amp; création d'un thème de base",
+        'category_name' => "Site web Prestashop",
+        'date'          => "2014 à 2017",
+        'tags'          => ['Prestashop', 'Bootstrap', 'HTML/CSS', 'Javascript'],
+        'thumb_url'     => ['images/projects/thumb-incenza.png', 'images/projects/thumb-speedway.png'],
+        'desc'          => "
+          <p>
+            Lors de mon travail chez <a href=\"http://www.e-frogg.com\" target=\"_blank\">e-frogg</a>,
+            j'ai eu l'occasion de m'occuper de l'intégration HTML/CSS et JS
+            de plusieurs sites web fonctionnant grâce au CMS e-commerce,
+            <strong>Prestashop</strong>, entre autre pour Incenza et Speedway.
+          </p>
+          <p>
+            J'ai ainsi mis en place un thème de base pour Prestashop, aidé du
+            framework HTML <strong>Bootstrap</strong>, que
+            nous avons ensuite amélioré au fil du temps et customisé selon
+            les besoins des clients.
+          </p>
+          <p>
+            Grâce aux maquettes réalisées par e-frogg, j'ai donc modifié
+            ce thème pour correspondre aux besoins d'<a href=\"https://www.incenza.com/\" target=\"_blank\">Incenza</a>,
+            un vendeur de parfum situé à Marseille, puis pour <a href=\"https://www.speedway.fr/\" target=\"_blank\">Speedway</a>,
+            un accessoiriste moto.
+          </p>"
       ],
       [
         'title'         => "Everyday Electro",
@@ -38,7 +64,7 @@ class DefaultController extends Controller
           un thème libre. J'ai donc créé un site web publiant des musiques
           quotidiennement, en référençant chaque artiste présent sur le site."
       ],
-      [
+      /*[
         'title'         => "Scrat: Aider le à garder son gland",
         'category_name' => "Application Flash",
         'date'          => "Janvier 2012",
@@ -60,7 +86,7 @@ class DefaultController extends Controller
             J'ai aussi créé plusieurs éléments graphiques de l'application
             Flash et du site à l'aide de Photoshop.
           </p>"
-      ],
+      ],*/
     ];
 
     // Plugins / Tools
