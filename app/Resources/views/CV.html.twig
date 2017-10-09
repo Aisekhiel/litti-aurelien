@@ -26,21 +26,21 @@
             <span class="_icon">
               <span class="icon-mobile"></span>
             </span>
-            <span class="_text">06 95 06 40 91</span>
+            <span class="_text">{{ 'profile.phone'|trans }}</span>
           </span>
 
           <span class="info-item info--mail">
             <span class="_icon">
               <span class="icon-mail"></span>
             </span>
-            <span class="_text">litti.aurelien@gmail.com</span>
+            <span class="_text">{{ 'profile.mail'|trans }}</span>
           </span>
 
           <span class="info-item info--address">
             <span class="_icon">
               <span class="icon-marker"></span>
             </span>
-            <span class="_text">Grenoble, Auvergne-Rhône-Alpes</span>
+            <span class="_text">{{ 'profile.location.city'|trans }}, {{ 'profile.location.region'|trans }}</span>
           </span>
         </div>
       </header>
@@ -50,20 +50,20 @@
           <span class="_icon">
             <span class="icon-mobile"></span>
           </span>
-          <span class="_text">06 95 06 40 91</span>
+          <span class="_text">{{ 'profile.phone'|trans }}</span>
         </span>
 
         <span class="info-item item--right">
           <span class="_icon">
             <span class="icon-mail"></span>
           </span>
-          <span class="_text">litti.aurelien@gmail.com</span>
+          <span class="_text">{{ 'profile.mail'|trans }}</span>
         </span>
       </div>
 
       <div class="cqv-block block--default block--avatar">
         <div class="_avatar">
-          <img src="images/photo.png" alt="Photo de Litti Aurélien" />
+          <img src="{{ asset('images/photo.png') }}" alt="Photo de Litti Aurélien" />
         </div>
       </div>
 

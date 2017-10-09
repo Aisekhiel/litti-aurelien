@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!-- Basic SEO -->
-    <title>{% block meta_title %}{% endblock %}{% block meta_title_base %}Litti Aurélien | Développeur Front-End | Grenoble{% endblock %}</title>
+    <title>{% block meta_title %}{% endblock %}{% block meta_title_base %}Litti Aurélien | Développeur Front-End | {{ 'profile.location.city'|trans }}{% endblock %}</title>
     <meta name="description" content="{% block meta_desc %}{% endblock %}" />
     <!-- OGs -->
     <meta property="og:image" content="{{ asset('images/og-image.png') }}">
@@ -16,7 +16,8 @@
     {% block stylesheets %}{% endblock %}
     <!-- Javascripts -->
     <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/kaiminus.js') }}?MK=1.0.0"></script><!-- Google Analytics -->
+    <script type="text/javascript" src="{{ asset('js/kaiminus.js') }}?MK=1.0.0"></script>
+    <!-- Google Analytics -->
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-27728219-2']);
@@ -64,7 +65,7 @@
                   <span class="icon-mobile"></span>
                 </span>
                 <span class="item--text"
-                  data-reversed-text="{{ '06 95 06 40 91'|reverse }}">
+                  data-reversed-text="{{ 'profile.phone'|trans|reverse }}">
                 </span>
               </div>
 
@@ -73,7 +74,7 @@
                   <span class="icon-mail"></span>
                 </span>
                 <span class="item--text"
-                  data-reversed-text="{{ 'litti.aurelien@gmail.com'|reverse }}">
+                  data-reversed-text="{{ 'profile.mail'|trans|reverse }}">
                 </span>
               </div>
 
@@ -82,7 +83,7 @@
                   <span class="icon-marker"></span>
                 </span>
                 <span class="item--text">
-                  Grenoble, Auvergne-Rhône-Alpes
+                  {{ 'profile.location.city'|trans }}, <br/>{{ 'profile.location.region'|trans }}
                 </span>
               </div>
             </div>
