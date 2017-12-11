@@ -245,6 +245,17 @@
             color: #FFF;
           }
         }
+
+				&.link--github {
+					&:hover {
+						background-color: @color-github;
+						color: #FFF;
+					}
+
+					&:active {
+						background-color: darken(@color-github, 6%);
+					}
+				}
       }
 
       .icon-paper-plane {
